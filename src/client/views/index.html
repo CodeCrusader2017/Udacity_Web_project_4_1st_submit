@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Index - Udacity web project 1</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1"  name="viewport"/>
+        <link rel="stylesheet" href="/styles/resets.css">
+        <link rel="stylesheet" href="/styles/base.css">
+        <link rel="stylesheet" href="/styles/header.css">
+        <link rel="stylesheet" href="/styles/form.css">
+        <link rel="stylesheet" href="/styles/footer.css">
+  </head>
+  <body>
+    <div class = "container">
+      <!-- <div class="header box"><h1>Paul's Udacity student BLOG on HTML, CSS and JavaScript</h1></div> --> 
+      <header class="header">
+        <div class="w3-panel w3-card" id="headerimage1">
+           <figcaption>Fig.1 - image by Erkin Sahin (FreeImages.com).</figcaption>
+        </div>
+        <h1><Bold>Natural Language Processing: this site checks if text is Objective or Subjective - and/or Ironic - via an API call to MeaningCloud.com. </Bold></h1>
+      </header>
+      <div class="sidebar box"><h2>Menu</h2>
+        <p><button><a href = "mailto: paul@Udacity.com" target="_blank">Contact me</a></button></p> <!-- Note: this is a fake email -->
+        <p><button><a href = "https://www.meaningcloud.com" target="_blank">Meaningcloud</a></button></p>
+        <p><button><a href = "https://www.udacity.com" target="_blank"> Udacity home</a></button></p>
+      </div>
+      <div class="content box">
+        <main>
+            <section>
+                <form class="nlp-form" onsubmit="return Client.handleSubmit(event)">
+                    <input id="nlptext" type="text" name="nlptext" value="" onblur="onBlur()" placeholder="Enter/paste website text here for MeaningCloud.com Natural Language Processing (NLP) analysis ... "> 
+                    <input type="submit" name="" value="Submit for NLP analysis" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                </form>
+            </section>
+
+            <section>
+                <!-- <strong>MeaningCloud.com results - indicating if the text is "Objective" or "Subjective", and if "Irony" is detected:</strong>  -->
+                <div id="results"></div>
+            </section>
+        </main>
+      </div>
+      <div class="footer box" id="footerlinks">Useful social media and other sites: 
+        <ul>
+          <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>  <a href="https://github.com/" target="_blank">GitHub</a></li>
+          <li><a href="https://facebook.com/" target="_blank">Facebook</a>  <a href="https://twitter.com/" target="_blank">Twitter</a></li>
+        </ul>
+        <p><em>Copyright &copy; 2021 Paul (Udacity student)</em></p>
+      </div>
+    </div>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+       </script>
+  </body>
+</html>

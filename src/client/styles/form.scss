@@ -1,0 +1,17 @@
+$background-color: lightcyan;
+
+form {
+    border: 1px solid #545454;
+    border-radius: 3px;
+    padding: 40px;
+    background: $background-color; 
+    line-height: 50px;
+    grid-area:main;
+}
+
+input {
+    padding: 5px 20px;
+    width: 94%;
+    line-height: 160px;
+    margin: 10px 0;
+}

@@ -1,0 +1,15 @@
+$background-color: black;
+
+.footer {
+  grid-area:ft;
+  background-color: $background-color;
+}
+
+#footerlinks {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  list-style-position: inside;
+  color: white;
+  background-position: center;
+}
